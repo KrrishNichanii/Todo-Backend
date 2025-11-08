@@ -30,10 +30,26 @@ app.use(cookieParser()) ;
 
 
 
+
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:5173', 
+  'https://todo-frontend-fx2aoijs8-krrish-nichaniis-projects.vercel.app', // production frontend
+];
+
 const corsOptions = {
-  origin: process.env.FRONTEND_URL ||  'http://localhost:3000' ,
+  origin: function (origin, callback) {
+    // allow requests with no origin (like Postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // if you use cookies
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true, 
 };
 
 app.use(cors(corsOptions));
