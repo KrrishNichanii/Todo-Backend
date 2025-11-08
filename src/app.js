@@ -38,16 +38,7 @@ const allowedOrigins = [
 ];
 
 const corsOptions = {
-  origin: function (origin, callback) {
-    // allow requests with no origin (like Postman)
-    if (!origin) return callback(null, true);
-
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin:'https://todo-frontend-ebswob8ff-krrish-nichaniis-projects.vercel.app',
   credentials: true, // if you use cookies
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 };
