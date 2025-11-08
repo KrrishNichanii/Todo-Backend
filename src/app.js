@@ -34,7 +34,7 @@ app.use(cookieParser()) ;
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173', 
-  'https://todo-frontend-fx2aoijs8-krrish-nichaniis-projects.vercel.app', // production frontend
+  'https://todo-frontend-qbbbj0ec6-krrish-nichaniis-projects.vercel.app', // production frontend
 ];
 
 const corsOptions = {
