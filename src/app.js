@@ -29,8 +29,13 @@ app.use(express.urlencoded({extended:true ,limit: "32kb"})) ;
 app.use(cookieParser()) ;
 
 
+const allowedOrigins = [
+  'http://localhost:3000', // for local dev
+  'https://todo-frontend-indol-seven.vercel.app' // your deployed frontend
+];
+
 const corsOptions = {
-  origin: 'http://localhost:5174', 
+  origin: allowedOrigins, 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, 
 };

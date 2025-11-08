@@ -23,11 +23,12 @@ It includes **JWT-based authentication**, **role-based access control**, and **C
 backend/
 ├── src/
 │ ├── controllers/
+| |-- db/
 │ ├── routes/
 │ ├── models/
 │ ├── middlewares/
 │ ├── utils/
-│ └── server.js
+│ └── app.js
 ├── postman/
 │ ├── backend-apis.postman_collection.json
 │ 
