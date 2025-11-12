@@ -15,6 +15,7 @@ It includes **JWT-based authentication**, **role-based access control**, and **C
 - ✅ API versioning (`/api/v1/...`)  
 - ✅ MongoDB integration  
 - ✅ Swagger or Postman documentation  
+- ✅ Admin can promote/demote and activate/deactivate user accounts
 
 ---
 
@@ -51,6 +52,10 @@ backend/
 - **Documentation:** Postman Collection / Swagger  
 
 ---
+
+## Admin access 
+email: admin@gmail.com
+password: 123456
 
 ## 🧠 Setup Instructions
 
