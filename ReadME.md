@@ -53,9 +53,7 @@ backend/
 
 ---
 
-## Admin access 
-email: admin@gmail.com
-password: 123456
+
 
 ## 🧠 Setup Instructions
 
