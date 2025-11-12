@@ -31,13 +31,11 @@ app.use(cookieParser()) ;
 
 
 
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://localhost:5174', 
-];
+
 
 const corsOptions = {
-  origin:'http://localhost:5174',
+  // origin:'http://localhost:5174',
+  origin:'https://todo-frontend-n0o8i6hkn-krrish-nichaniis-projects.vercel.app',
   credentials: true, // if you use cookies
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 };
