@@ -3,10 +3,12 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import { ApiError } from "../utils/ApiError.js"; 
 
-// Cookie configuration for tokens
+
+
 const options = {
-    httpOnly: true, 
-    secure: process.env.NODE_ENV === "production"
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production", 
+    sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax" 
 };
 
 // Helper function to generate and set both access and refresh tokens
